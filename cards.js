@@ -51,6 +51,12 @@ const generateCard = (name, price, imgPath) => {
     // create button
     const adoptMeButton = document.createElement("button");
     adoptMeButton.textContent = "ADOPT ME";
+    
+    // add click event to button
+    adoptMeButton.addEventListener("click", () => {
+        addCatToList(catappendedList, name, price, imgPath);
+        alert(`${name} added to cart!`);
+    });
 
     // append components to card
     cardContainer.appendChild(catImg);
@@ -70,3 +76,4 @@ const addAllCardsToDocument = () => {
 }
 
 addAllCardsToDocument();
+

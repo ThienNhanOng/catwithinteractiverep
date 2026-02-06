@@ -8,16 +8,19 @@ function goToHome() {
   window.location.href = "index.html";
 }
 
-const catappendedList = [];
+// Load cart from localStorage or create empty array
+const catappendedList = JSON.parse(localStorage.getItem('cart')) || [];
 
 //add cats to cart list
 function addCatToList(catList,name,price,img) {
 // append cats to catList
 catList.push({name: name, price: price, img: img});
+// save to localStorage
+localStorage.setItem('cart', JSON.stringify(catList));
 return catList;
 }
 
-// Wait for DOM to load before accessing elements
+
 window.addEventListener('DOMContentLoaded', function() {
   const cartLabel = document.getElementById('cart');
   
