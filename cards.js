@@ -34,7 +34,7 @@ const generateCard = (name, price, imgPath) => {
     const catImg = document.createElement("img");
     catImg.src = imgPath;
     catImg.alt = "";
-    catImg.style="width:450px; height:auto";
+    catImg.style="width:300px; height:auto";
 
     // create the name header
     const catNameHeader = document.createElement("h3");
