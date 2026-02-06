@@ -10,6 +10,8 @@
     <!--point to java script file for redirect-->
 	<script src="cartRedirect.js"></script>
 
+    <!-- point to java script file for card generation -->
+    <script src="cards.js" defer></script>
 </head>
 
 <!-- set up the navbar -->
@@ -55,76 +57,10 @@
     </section>
 
     <!-- set up the available cats -->
-    <section class="display-content">
-        <div>
-            <div class="card">  
-                <img src="../Assets/Primus.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    PRIMUS
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $319.99</h4>
-                <button>ADOPT ME</button>
-            </div>
-        </div>
-        
+    <section class="display-content" id="cards-container">
 
-        <div>
-            <div class="card">  
-                <img src="../Assets/Binky.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    BINKY
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $352.99</h4>
-                <button onclick="new Audio('Assets/yeahignorethisfileifyouseeit.mp3').play()">ADOPT ME</button>
-            </div>
-        </div>
+        <!-- cats available to adopt are added her via cards.js  -->
 
-
-        <div>
-            <div class="card">  
-                <img src="../Assets/apollo.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    APOLLO
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $99.99</h4>
-                <button>ADOPT ME</button>
-            </div>
-        </div>
-        
-
-        <div>
-            <div class="card">  
-                <img src="../Assets/amber.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    AMBER
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $210.00</h4>
-                <button>ADOPT ME</button>
-            </div>
-        </div>
-
-        <div>
-            <div class="card">  
-                <img src="../Assets/Rusty.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    RUSTY
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $210.00</h4>
-                <button>ADOPT ME</button>
-            </div>
-        </div>
-        
-
-        <div>
-            <div class="card">  
-                <img src="../Assets/juno.png" alt="" style="width:300px; height:auto;" />
-                <h3 class="primary-font" style="font-size: 1.5rem">
-                    JUNO
-                </h3>
-                <h4 class="primary-font" style="font-size: 1rem">Price: $111.11</h4>
-                <button>ADOPT ME</button>
-            </div>
-        </div>
     </section>
 
     <!-- set up the news letter -->
