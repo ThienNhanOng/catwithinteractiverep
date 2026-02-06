@@ -8,32 +8,38 @@ function goToHome() {
   window.location.href = "index.html";
 }
 
-// Load cart from localStorage or create empty array
+//local storage for cart list
 const catappendedList = JSON.parse(localStorage.getItem('cart')) || [];
 
 //add cats to cart list
-function addCatToList(catList,name,price,img) {
-// append cats to catList
-catList.push({name: name, price: price, img: img});
-// save to localStorage
-localStorage.setItem('cart', JSON.stringify(catList));
-return catList;
+function addCatToList(cart, name, price) {
+  // Check if cat is already in cart
+  if(cart.some(checkcat => checkcat.name === name)) {
+    alert("This cat is already in your cart!");
+    return;
+  }
+  //if cat is not in cart, add it and update
+  cart.push({name, price});
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} has been added to your cart!`);
+  updateCart();
 }
 
-
-window.addEventListener('DOMContentLoaded', function() {
+function updateCart() {
   const cartLabel = document.getElementById('cart');
-  
+  cartLabel.innerHTML = ""; // clear cart first
+
   if (catappendedList.length === 0) {
     cartLabel.innerHTML = `<p class="secondary-font">No items yet.</p>`;
-  } 
-  else {
-    cartLabel.innerHTML = ""; // clear previous content first
-
-    catappendedList.forEach(item => {
-      cartLabel.innerHTML += `<p>${item.name} - $${item.price}</p>`;
-    });
+    return;
   }
-});
 
+  //display each cat
+  for (let i = 0; i < catappendedList.length; i++) {
+    cartLabel.innerHTML += `<p>${catappendedList[i].name} - $${catappendedList[i].price.toFixed(2)}</p>`;
+  }
+}
+
+// Load and display cart when page loads 
+window.addEventListener('DOMContentLoaded', updateCart);
   
