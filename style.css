@@ -1,0 +1,259 @@
+:root {
+  --special-color: rgb(141, 40, 161);
+  background-color: rgb(247, 248, 243);
+  --footer-text-color: rgb(250, 253, 248);
+}
+
+.special-color {
+  color: var(--special-color);
+}
+
+.footer-text-color {
+  color: var(--footer-text-color);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: right;
+  height: 100%;
+  padding-right: 32px;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* height: auto; */
+}
+.article-content {
+  margin: 0 auto;
+  padding-top: 200px;
+  flex: 1 0 auto; /* Allows the content to grow and fill available space */
+  display: flex;
+  font-size: 1.25rem; /* Font size */
+}
+
+
+p {
+  line-height: 1.6; /* Sets line spacing to 1.6 times the font size */
+}
+.primary-font {
+  font-family: "Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 3rem;
+}
+.secondary-font {
+  font-family: "Tahoma", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.logo {
+  width: 150px; /* Set your desired width */
+  height: auto; /* Automatically adjusts to prevent distortion */
+}
+
+.navbar {
+  position: fixed; /* helps keep the navbar stick to top*/
+  top: 0; /* helps keep the navbar stick to top*/
+  z-index: 1; /* Keeps navbar above other content */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background: rgb(235, 238, 224); /* Optional background */
+  border-radius: 5px;
+  margin: 0px auto; /* keep at the VERY top of the screen */
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+}
+
+.hero {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  align-items: self-end;
+  justify-content: baseline;
+  flex-wrap: wrap;
+}
+
+.horizontal-menu {
+  display: flex; /* Aligns items in a row */
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.horizontal-menu li {
+  padding: 10px 10px; /* Adds spacing around menu items */
+}
+
+.horizontal-menu a {
+  color: rgb(11, 13, 34);
+  text-decoration: none; /* Removes underlines */
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.horizontal-menu a:hover {
+  color: var(--special-color);
+}
+
+.banner {
+  margin: 10px auto;
+  display: grid;
+  max-width: 95%;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  justify-items: center;
+  align-items: center;
+  gap: 40px;
+  background: rgb(235, 238, 224);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+  width: 40vw;
+  display: inline-block;
+}
+
+.display-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(235, 238, 224);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* policy configuration */
+.policy-links {
+  list-style: none;
+  padding: 0;
+}
+/* hover and idle color change */
+.policy-links a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+.policy-links a:hover {
+  color: var(--special-color);
+}
+
+/* button customization */
+button {
+  font-family: "Garamond", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 24px;
+  background-color: rgb(177, 102, 192);
+  color: white; /* for text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  background-color: rgb(182, 228, 247);
+  transform: translateY(-10px);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.news-letter-container {
+  position: relative; /* Essential for positioning the pseudo-element */
+  width: 100%;
+  height: 600px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-letter-container::before {
+  content: "";
+  background-image: url("../Assets/NewsletterBG.jpg");
+  background-size: cover;
+  position: absolute;
+  /* top: 0;
+    left: 0; */
+  width: 100%;
+  height: 100%;
+  opacity: 0.9; /* Set desired opacity here (0.0 to 1.0) */
+  z-index: -1; /* Places the image behind the container's content */
+}
+
+footer {
+  /*margin-top: auto;  Adjust based on footer height */
+  position-anchor: bottom;
+  width: 100%;
+  height: auto;
+  background: rgb(44, 24, 58); /* Background color for footer */
+  padding: 10px; /* spacing for footer */
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2); 
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* for smaller screen */
+@media screen and (max-width: 768px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+    padding: auto;
+  }
+  .horizontal-menu li {
+    padding: 5px 5px; /* Adds spacing around menu items */
+  }
+
+  .banner {
+    width: fit-content;
+    display: flex; /* Hide an element on small screens */
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-items: baseline;
+    align-items: flex-start;
+  }
+  .banner-image {
+    width: 85vw;
+  }
+
+  .display-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .email-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  footer {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+  }
+}

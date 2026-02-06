@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>Cat Adoption Center</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<!-- set up the navbar -->
+<body class="article-content">
+    <section class="navbar">
+      <div style="display: flex;">
+		<img
+        class="logo"
+        src="../Assets/GleebusLogo.png"
+        style="border-radius: 5px; height: 150px; padding: 4px"
+        alt=""
+      />
+	  <h3 style="padding-left: 5px;" class="primary-font">GLEEBUS' CAT SHELTER</h3>
+	  </div>
+
+      <nav class="primary-font">
+        <ul class="horizontal-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Browse</a></li>
+          <li><a href="">About Us</a></li>
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- set up the banner -->
+    <section class="banner">
+      <div class="hero">
+        <h3 style="padding-left: 50px; padding-right: 50px;" class="primary-font">Our Cats Are <br /><span class="special-color"><i><b>Never </b></i></span> Alienated!</h3>
+        <p class="secondary-font bottom-text" style="padding-left: 50px; padding-right: 50px">
+          Here at <strong class="special-color">Gleebus' Cat Shelter</strong> we make sure our cats
+          never feel alienated. We prioritize their health and happiness from the time
+          <b>they're at our shelter</b> until the time they're <b>in your home</b>!
+          Each and every one of our cats are <i>OUT OF THIS WORLD</i>, so we hope you'll
+          stop by sometime and get to know them! The right one is waiting!
+        </p>
+      </div>
+      <div>
+        <img class="banner-image" src="../Assets/CatAtShelter.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- set up the available cats -->
+    <section class="display-content">
+        <div>
+            <div class="card">  
+                <img src="../Assets/Primus.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    PRIMUS
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $319.99</h4>
+                <button>ADOPT ME</button>
+            </div>
+        </div>
+        
+
+        <div>
+            <div class="card">  
+                <img src="../Assets/Binky.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    BINKY
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $352.99</h4>
+                <button onclick="new Audio('Assets/yeahignorethisfileifyouseeit.mp3').play()">ADOPT ME</button>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="card">  
+                <img src="../Assets/apollo.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    APOLLO
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $99.99</h4>
+                <button>ADOPT ME</button>
+            </div>
+        </div>
+        
+
+        <div>
+            <div class="card">  
+                <img src="../Assets/amber.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    AMBER
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $210.00</h4>
+                <button>ADOPT ME</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">  
+                <img src="../Assets/Rusty.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    RUSTY
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $210.00</h4>
+                <button>ADOPT ME</button>
+            </div>
+        </div>
+        
+
+        <div>
+            <div class="card">  
+                <img src="../Assets/juno.png" alt="" style="width:300px; height:auto;" />
+                <h3 class="primary-font" style="font-size: 1.5rem">
+                    JUNO
+                </h3>
+                <h4 class="primary-font" style="font-size: 1rem">Price: $111.11</h4>
+                <button>ADOPT ME</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- set up the news letter -->
+    <section class="news-letter-container">
+      <h1 class="primary-font">
+        Join the <i>GLEEBUSLINGS</i>
+      </h1>
+      <p style="text-align: center;">Join our news letter to hear about new available cats or how to
+        help out our shelter! We're <b>always</b> looking 
+        for volunteers!
+      </p>
+      <div
+        style="display: flex; gap: 5px; align-items: center"
+        class="email-div secondary-font"
+      >
+        <input
+          type="email"
+          id="email"
+          style="width: 300px; height: 40px"
+          placeholder="Enter your email"
+        />
+        <button>Subscribe</button>
+      </div>
+    </section>
+
+    <!-- set up the footer -->
+	<footer >
+        	<div>
+            <ul class="policy-links secondary-font">
+                <span class="footer-text-color"><li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Adoption Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li></span>
+            </ul>
+		   
+
+           </div>
+		   <div>
+            <p class="contacts secondary-font">
+			   <span class="footer-text-color">Phone number: 123-456-7890<br>
+			   Email: Gleebus@gmail.com <br>
+			   Location: Primus St., Binky, FL 34243</span>
+		   </p>
+           </div>
+
+        
+	</footer>
+
+
+</body>
+</html>
