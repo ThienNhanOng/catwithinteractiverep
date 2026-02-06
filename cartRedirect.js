@@ -14,19 +14,21 @@ const catappendedList = JSON.parse(localStorage.getItem('cart')) || [];
 //add cats to cart list
 function addCatToList(cart, name, price) {
   // Check if cat is already in cart
-  if(cart.some(checkcat => checkcat.name === name)) {
+  if(cart.some(checkcat => checkcat.name == name)) {
     alert("This cat is already in your cart!");
     return;
   }
-  //if cat is not in cart, add it and update
+  //if cat is not in cart, add the cat name and price to cart
   cart.push({name, price});
+  //update the local storage
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${name} has been added to your cart!`);
+
   updateCart();
 }
 
 function updateCart() {
   const cartLabel = document.getElementById('cart');
+  const totalLabel = document.getElementById('total');
   cartLabel.innerHTML = ""; // clear cart first
 
   if (catappendedList.length === 0) {
@@ -36,9 +38,14 @@ function updateCart() {
 
   //display each cat
   for (let i = 0; i < catappendedList.length; i++) {
-    cartLabel.innerHTML += `<p>${catappendedList[i].name} - $${catappendedList[i].price.toFixed(2)}</p>`;
-  }
+    cartLabel.innerHTML += `<p>${catappendedList[i].name} - $${catappendedList[i].price}</p>`;
+  //calculate and display total
+  const total = catappendedList.reduce((sum, cat) => sum + cat.price, 0);
+  totalLabel.innerHTML = `<p>Total: $${total}</p>`;
+    }
 }
+  
+
 
 // Load and display cart when page loads 
 window.addEventListener('DOMContentLoaded', updateCart);
