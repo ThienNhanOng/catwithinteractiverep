@@ -7,6 +7,8 @@
 	<title>Cat Adoption Center</title>
 	<link rel="stylesheet" href="style.css">
 
+  <!--point to java script file for redirect-->
+  <script src="cartRedirect.js"></script>
 </head>
 
 <!-- set up the navbar -->
@@ -24,7 +26,7 @@
 
       <nav class="primary-font">
         <ul class="horizontal-menu">
-          <li><a href="">Home</a></li>
+          <li><a href="#" onclick="goToHome()">Home</a></li>
           <li><a href="">Browse</a></li>
           <li><a href="">About Us</a></li>
           <li>
@@ -37,9 +39,15 @@
 
   <section class="CartDisplay">
     <div style="display: flex; justify-content: center;">
-      <p><b>Your cart</b></p>
-      
+      <p style="font-size: 4.25rem;"><b>Your cart</b></p>
     </div>
+
+  <div class="CatInCart" id="cart">
+    <p style="font-size: 2rem;"><b>cats in your cart</b></p>
+    
+  </div>
+  
+
   </section>
 
 

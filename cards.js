@@ -1,7 +1,7 @@
 const cats = [
 
     {
-        name: "PRIMUS", price: 319.99, img: "Assets/Primus.png"
+        name: "PRIMUS", price: 319.99, img: "Assets/Primus.png", 
     },
     {
         name: "BINKY", price: 352.99, img: "Assets/Binky.png"

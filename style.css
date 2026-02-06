@@ -214,6 +214,16 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
+.CartDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 5px;
+  min-height: 80vh;
+}
+
 /* for smaller screen */
 @media screen and (max-width: 768px) {
   body {
@@ -251,9 +261,12 @@ footer {
   }
   footer {
     display: grid;
+    position: fixed;
     position: relative;
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 10px;
   }
+
+
 }
