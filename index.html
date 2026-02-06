@@ -12,6 +12,9 @@
 
     <!-- point to java script file for card generation -->
     <script src="cards.js" defer></script>
+
+    <!-- point to java script file for subscription -->
+    <script src="emailHandler.js" defer></script>
 </head>
 
 <!-- set up the navbar -->
@@ -82,8 +85,14 @@
           style="width: 300px; height: 40px"
           placeholder="Enter your email"
         />
-        <button>Subscribe</button>
+        <button id="subscribe-button">Subscribe</button>
       </div>
+
+      <!-- this is where it will display the previously displayed email -->
+      <div>
+        <p style="text-align:center;" class="secondary-font" id="recently-entered-email">You haven't subscribed with any email yet.</p>
+      </div>
+
     </section>
 
     <!-- set up the footer -->
