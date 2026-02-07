@@ -226,6 +226,16 @@ footer {
   min-height: 80vh;
 }
 
+.Palindrome-Style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 5px;
+  min-height: 80vh;
+}
+
 /* for ClearLabel which is the purchase button */
 .ClearLabel {
   position: absolute;

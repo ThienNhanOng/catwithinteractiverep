@@ -7,3 +7,7 @@ function goToCart() {
 function goToHome() {
   window.location.href = "index.html";
 }
+
+function goToPalindrome() {
+  window.location.href = "palindrome.html";
+}

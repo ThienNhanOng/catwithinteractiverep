@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>Cat Adoption Center</title>
+	<link rel="stylesheet" href="style.css">
+
+  <!--point to java script file for redirect-->
+  <script src="ScreenHandler.js"></script>
+
+  <script src="palindrome.js" defer></script>
+
+</head>
+
+<!-- set up the navbar -->
+<body class="article-content">
+    <section class="navbar">
+      <div style="display: flex;">
+		<img
+        class="logo"
+        src="../Assets/GleebusLogo.png"
+        style="border-radius: 5px; height: 150px; padding: 4px"
+        alt=""
+      />
+	  <h3 style="padding-left: 5px;" class="primary-font">GLEEBUS' CAT SHELTER</h3>
+	  </div>
+
+      <nav class="primary-font">
+        <ul class="horizontal-menu">
+          <li><a href="#" onclick="goToHome()">Home</a></li>
+          <li><a href="">Browse</a></li>
+          <li><a href="">About Us</a></li>
+          <li>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- palindrome stuff -->
+  <section class="palindromeTitle">
+  <div style="display: flex; justify-content: center; align-items: flex-start;">
+      <p style="font-size: 4.25rem; margin-top: -50px;"><b>Palindrome</b></p>
+  </div>
+    <!-- text -->
+    <div class="wordChecker" id="Palindrome-Style">
+      <p style="font-size: 2.25rem; margin-top: -50px;"><b>check if word is a Palindrome</b></p>
+    </div>
+    <!-- user input -->
+    <div>
+      <h4>Enter a word:</h4>
+      <input type="text" id="inputWord" placeholder="Enter a word" />
+      <button onclick="cleanWord()">Check Palindrome</button>
+    </div>
+
+
+
+
+<script src="palindrome.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+</body>
+</html>
