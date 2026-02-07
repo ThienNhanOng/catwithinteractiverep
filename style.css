@@ -226,6 +226,20 @@ footer {
   min-height: 80vh;
 }
 
+/* for ClearLabel which is the purchase button */
+.ClearLabel {
+  position: absolute;
+  left: 575px;
+  top: 375px;
+}
+
+.ClearLabel button {
+  font-size: 2rem;
+  padding: 20px 40px;
+  color : white;
+  background-color: rgb(125, 223, 125);
+}
+
 /* for smaller screen */
 @media screen and (max-width: 768px) {
   body {

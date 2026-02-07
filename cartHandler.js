@@ -38,7 +38,7 @@ function updateCart() {
     totalLabel.innerHTML = `<p>Total: $0.00</p>`;
     return;
   }
-    
+
     //Display each cat in cart
     for (let i = 0; i < catappendedList.length; i++) {
       const cat = catappendedList[i];
@@ -54,6 +54,7 @@ function clearCart() {
     catappendedList.length = 0;
     localStorage.setItem('cart', JSON.stringify(catappendedList));
     updateCart();
+    alert("Thank you for adopting");
 }
 
 // Load page
