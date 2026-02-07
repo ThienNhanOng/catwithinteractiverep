@@ -54,7 +54,7 @@ const generateCard = (name, price, imgPath) => {
     
     //add cat to list on clicked
     adoptMeButton.addEventListener("click", () => {
-        addCatToList(catappendedList, name, price);
+        addCatToList(name, price);
     });
 
     // append components to card
