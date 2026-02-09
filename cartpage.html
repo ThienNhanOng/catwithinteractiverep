@@ -7,6 +7,13 @@
 	<title>Cat Adoption Center</title>
 	<link rel="stylesheet" href="style.css">
 
+      <!--point to java script file for redirect-->
+      <script src="cards.js"></script>
+
+
+      <!--point to java script file for redirect-->
+      <script src="cartLabels.js"></script>
+
   <!--point to java script file for redirect-->
   <script src="ScreenHandler.js"></script>
 
@@ -44,7 +51,7 @@
 
   <section class="CartDisplay">
     <div style="display: flex; justify-content: center;">
-      <p style="font-size: 4.25rem;"><b>Your cart</b></p>
+      <p style="font-size: 4.25rem;" class="primary-font"><b>Your Cart</b></p>
     </div>
     <!--cart placeholder -->
   <div class="CatInCart" id="cart">
@@ -52,12 +59,13 @@
   </div>
   <!-- total placeholder -->
   <div class="cartTotal" id="total">
-    <p style="font-size: 2rem;"><b>Total: $0.00</b></p>
+    <p style="font-size: 2rem;" class="secondary-font"><b>Total: $0.00</b></p>
   </div>
 
   <!-- clear cart button -->
-   <div class="ClearLabel" id="clear-cart">
-   <button onclick="clearCart()">Adopt</button></div>
+   <div id="clear-cart" style="display: flex; gap: 5px; align-items: center">
+      <button onclick="clearCart()">Adopt</button>
+    </div>
   </section>
 
 

@@ -144,6 +144,18 @@ p {
     0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+.label {
+  background-color: rgb(235, 238, 224);
+  display: grid;
+  margin: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  gap: 100px;
+    box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* policy configuration */
 .policy-links {
   list-style: none;
@@ -247,7 +259,7 @@ footer {
   font-size: 2rem;
   padding: 20px 40px;
   color : white;
-  background-color: rgb(125, 223, 125);
+  background-color: var(--special-color);
 }
 
 /* for smaller screen */

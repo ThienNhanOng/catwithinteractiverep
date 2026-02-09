@@ -16,14 +16,14 @@ const cats = [
         name: "RUSTY", price: 210.00, img: "Assets/Rusty.png"
     },
     {
-        name: "JUNO", price: 111.11, img: "Assets/Juno.png"
+        name: "JUNO", price: 111.11, img: "Assets/juno.png"
     }
 
 ]
 
 const cardSection = document.getElementById("cards-container");
 
-const generateCard = (name, price, imgPath) => {
+const generateCard = (name, price, img) => {
     // create a div to store a card in
     const cardContainer = document.createElement("div");
 
@@ -32,7 +32,7 @@ const generateCard = (name, price, imgPath) => {
 
     // set up the image
     const catImg = document.createElement("img");
-    catImg.src = imgPath;
+    catImg.src = img;
     catImg.alt = "";
     catImg.style="width:300px; height:auto";
 
@@ -52,9 +52,9 @@ const generateCard = (name, price, imgPath) => {
     const adoptMeButton = document.createElement("button");
     adoptMeButton.textContent = "ADOPT ME";
     
-    //add cat to list on clicked
+        //add cat to list on clicked
     adoptMeButton.addEventListener("click", () => {
-        addCatToList(name, price);
+        addCatToList(name, price, img);
     });
 
     // append components to card

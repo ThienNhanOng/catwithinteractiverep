@@ -2,7 +2,7 @@ let total = 0;
 const catappendedList = JSON.parse(localStorage.getItem('cart')) || [];
 
 
-function addCatToList(name, price) {
+function addCatToList(name, price, img) {
     //flag cat not already in cart.
     let alreadyInCart = false;
 
@@ -20,7 +20,7 @@ function addCatToList(name, price) {
     }
 
     //if cat is not in cart, add to list.
-    catappendedList.push({name,price});
+    catappendedList.push({name, price, img});
     localStorage.setItem('cart', JSON.stringify(catappendedList));
     updateCart();
 }
@@ -41,8 +41,10 @@ function updateCart() {
 
     //Display each cat in cart
     for (let i = 0; i < catappendedList.length; i++) {
-      const cat = catappendedList[i];
-      cartLabel.innerHTML += `<p>${catappendedList[i].name} - $${catappendedList[i].price}</p>`;
+      let cat = catappendedList[i];
+      //cartLabel.innerHTML += `<p>${catappendedList[i].name} - $${catappendedList[i].price}</p>`;
+      // add the cat label here
+      cartLabel.appendChild(generateLabel(catappendedList[i].name, catappendedList[i].price, catappendedList[i].img))
       total += parseFloat(cat.price);
     }
 
@@ -51,6 +53,11 @@ function updateCart() {
 }
 //clear list and set storage to empty list
 function clearCart() {
+    if (catappendedList.length === 0) {
+        alert("There are no cats to adopt, your cart is empty!");
+        return;
+    }
+
     catappendedList.length = 0;
     localStorage.setItem('cart', JSON.stringify(catappendedList));
     updateCart();
