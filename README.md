@@ -5,7 +5,7 @@ Izzy Carlson & Thien Ong
 # GLEEBUS CAT SHELTER
 *** See to-do 1 in separate folder. Rest of project addresses to-do 2.
 
-## Live link:
+## Live link: https://gleebus-cat-shelter.netlify.app/
 
 ## Files
 
