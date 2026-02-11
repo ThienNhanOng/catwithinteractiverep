@@ -3,30 +3,31 @@
 Izzy Carlson & Thien Ong
 
 # GLEEBUS CAT SHELTER
+*** See to-do 1 in separate folder. Rest of project addresses to-do 2.
 
 ## Live link:
 
 ## Files
 
-### cards.js
+- cards.js
 Handles creating the cards dynamically using java script instead of manually copy-pasting code in html.
 
-### cartHandler.js
+- cartHandler.js
 Handles cart logic, like updating the cart when cats are added or removed.
 
-### cartLabels.js
+- cartLabels.js
 Handles creating nicely formatted labels for each cat in the cart.
 
-### screenHandler.js
+- screenHandler.js
 Assists with changing the websites page from the cart back to the home page and vice versa.
 
-### index.html
+- index.html
 The main page.
 
-### cartpage.html
+- cartpage.html
 The cart page.
 
-### style.css
+- style.css
 The style used for the html pages. 
 
 ## Important DOM Items
