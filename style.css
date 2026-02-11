@@ -269,8 +269,16 @@ footer {
     margin: 0 auto;
     padding: auto;
   }
+
+  .horizontal-menu {
+  display: flex; /* Aligns items in a row */
+  flex-direction: column;
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
   .horizontal-menu li {
-    padding: 5px 5px; /* Adds spacing around menu items */
+    padding: 3px 3px; /* Adds spacing around menu items */
   }
 
   .banner {
@@ -284,6 +292,36 @@ footer {
   .banner-image {
     width: 85vw;
   }
+
+  .navbar {
+  position: fixed; /* helps keep the navbar stick to top*/
+  top: 0; /* helps keep the navbar stick to top*/
+  z-index: 1; /* Keeps navbar above other content */
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background: rgb(235, 238, 224); /* Optional background */
+  border-radius: 5px;
+  margin: 0px auto; /* keep at the VERY top of the screen */
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2); /* h v blur spread color */
+}
+
+.primary-font {
+  font-family: "Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1rem;
+}
+.secondary-font {
+  font-family: "Tahoma", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.5rem;
+}
 
   .display-content {
     display: grid;
