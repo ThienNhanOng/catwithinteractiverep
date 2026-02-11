@@ -48,7 +48,8 @@ function updateCart() {
       total += parseFloat(cat.price);
     }
 
-    //Display total
+    //Display total, format $xxx.xx
+    total.toFixed(2);
     totalLabel.innerHTML = `<p style="font-size: 32px;"><b>Total:</b> $${total}</p>`;
 }
 //clear list and set storage to empty list
